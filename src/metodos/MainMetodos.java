@@ -8,7 +8,7 @@ public class MainMetodos {
 
     public static void main(String[] args) {
         // TODO code application logic here
-        FormPuntoFijo form = new FormPuntoFijo();
+        FormMenu form = new FormMenu();
         form.setVisible(true);
         form.setLocationRelativeTo(null);
     }

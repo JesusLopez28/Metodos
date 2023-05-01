@@ -6,64 +6,35 @@ package metodos;
 
 import javax.swing.JOptionPane;
 
-public class FormPuntoFijo extends javax.swing.JFrame {
+public class FormSecante extends javax.swing.JFrame {
 
-    public FormPuntoFijo() {
+    public FormSecante() {
         initComponents();
-        txtResultado.setEditable(false);
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnLimpiar = new javax.swing.JButton();
+        lbDecimales = new javax.swing.JLabel();
         lbTitulo = new javax.swing.JLabel();
+        txtDecimales = new javax.swing.JTextField();
         lbEcuacion = new javax.swing.JLabel();
-        lbX0 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtResultado = new javax.swing.JTextArea();
+        lbVa = new javax.swing.JLabel();
         lbError = new javax.swing.JLabel();
         lbResultado = new javax.swing.JLabel();
         txtEcuacion = new javax.swing.JTextField();
-        txtX0 = new javax.swing.JTextField();
+        txtVa = new javax.swing.JTextField();
         txtError = new javax.swing.JTextField();
         btnCalcular = new javax.swing.JButton();
-        btnLimpiar = new javax.swing.JButton();
-        lbDecimales = new javax.swing.JLabel();
-        txtDecimales = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtResultado = new javax.swing.JTextArea();
+        lbVb = new javax.swing.JLabel();
+        txtVb = new javax.swing.JTextField();
         btnRegresar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        lbTitulo.setFont(new java.awt.Font("Nirmala UI", 1, 24)); // NOI18N
-        lbTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbTitulo.setText("Método de punto fijo");
-
-        lbEcuacion.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
-        lbEcuacion.setText("Ecuación:");
-
-        lbX0.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
-        lbX0.setText("Valor inicial (x0):");
-
-        lbError.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
-        lbError.setText("Error máximo:");
-
-        lbResultado.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
-        lbResultado.setText("Resultado:");
-
-        txtEcuacion.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
-
-        txtX0.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
-
-        txtError.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
-
-        btnCalcular.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
-        btnCalcular.setText("Calcular");
-        btnCalcular.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCalcularActionPerformed(evt);
-            }
-        });
 
         btnLimpiar.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
         btnLimpiar.setText("Limpiar");
@@ -76,12 +47,47 @@ public class FormPuntoFijo extends javax.swing.JFrame {
         lbDecimales.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
         lbDecimales.setText("Decimales:");
 
+        lbTitulo.setFont(new java.awt.Font("Nirmala UI", 1, 24)); // NOI18N
+        lbTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbTitulo.setText("Método de la Secante");
+
         txtDecimales.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
+
+        lbEcuacion.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
+        lbEcuacion.setText("Ecuación:");
 
         txtResultado.setColumns(20);
         txtResultado.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
         txtResultado.setRows(5);
         jScrollPane1.setViewportView(txtResultado);
+
+        lbVa.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
+        lbVa.setText("Valor A:");
+
+        lbError.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
+        lbError.setText("Error máximo:");
+
+        lbResultado.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
+        lbResultado.setText("Resultado:");
+
+        txtEcuacion.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
+
+        txtVa.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
+
+        txtError.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
+
+        btnCalcular.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
+        btnCalcular.setText("Calcular");
+        btnCalcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalcularActionPerformed(evt);
+            }
+        });
+
+        lbVb.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
+        lbVb.setText("Valor B:");
+
+        txtVb.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
 
         btnRegresar.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
         btnRegresar.setText("Regresar");
@@ -98,8 +104,7 @@ public class FormPuntoFijo extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 481, Short.MAX_VALUE)
-                    .addComponent(lbTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lbTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -109,16 +114,23 @@ public class FormPuntoFijo extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lbEcuacion)
-                            .addComponent(lbX0)
+                            .addComponent(lbVa)
                             .addComponent(lbError)
-                            .addComponent(lbDecimales)
-                            .addComponent(lbResultado))
+                            .addComponent(lbDecimales))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtDecimales, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txtError, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtX0, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtEcuacion))))
+                            .addComponent(txtVa, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtEcuacion)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lbVb)
+                        .addGap(69, 69, 69)
+                        .addComponent(txtVb))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lbResultado)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -132,8 +144,12 @@ public class FormPuntoFijo extends javax.swing.JFrame {
                     .addComponent(txtEcuacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbX0)
-                    .addComponent(txtX0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lbVa)
+                    .addComponent(txtVa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbVb)
+                    .addComponent(txtVb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbError)
@@ -145,7 +161,7 @@ public class FormPuntoFijo extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(lbResultado)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnLimpiar)
@@ -157,15 +173,15 @@ public class FormPuntoFijo extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
-        // TODO add your handling code here:
-        this.calcular();
-    }//GEN-LAST:event_btnCalcularActionPerformed
-
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
         // TODO add your handling code here:
         this.limpiar();
     }//GEN-LAST:event_btnLimpiarActionPerformed
+
+    private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
+        // TODO add your handling code here:
+        this.calcular();
+    }//GEN-LAST:event_btnCalcularActionPerformed
 
     private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
         // TODO add your handling code here:
@@ -178,7 +194,8 @@ public class FormPuntoFijo extends javax.swing.JFrame {
     private void limpiar() {
         // Limpiar los campos de texto
         txtEcuacion.setText("");
-        txtX0.setText("");
+        txtVa.setText("");
+        txtVb.setText("");
         txtError.setText("");
         txtDecimales.setText("");
         txtResultado.setText("");
@@ -187,24 +204,31 @@ public class FormPuntoFijo extends javax.swing.JFrame {
 
     private void calcular() {
         String funcion;
-        Double inicial = 0.0;
+        Double a = 0.0;
+        Double b = 0.0;
         Double error = 0.0;
         int decimales = 0;
-
         funcion = txtEcuacion.getText();
         funcion = funcion.replaceAll(" ", "");
+
         try {
-            inicial = Double.parseDouble(txtX0.getText());
+            a = Double.parseDouble(txtVa.getText());
         } catch (NumberFormatException nfe) {
             JOptionPane.showMessageDialog(null, "Ingrese un valor numerico", "Valor inicial", JOptionPane.WARNING_MESSAGE);
         }
-        error = Double.parseDouble(txtError.getText());
 
+        try {
+            b = Double.parseDouble(txtVb.getText());
+        } catch (NumberFormatException nfe) {
+            JOptionPane.showMessageDialog(null, "Ingrese un valor numerico", "Valor inicial", JOptionPane.WARNING_MESSAGE);
+        }
+
+        error = Double.parseDouble(txtError.getText());
         decimales = Integer.parseInt(txtDecimales.getText());
 
         if (funcion.length() != 0) {
-            PuntoFijo pf = new PuntoFijo();
-            txtResultado.setText(pf.puntofijo(funcion, inicial, error, decimales));
+            Secante bi = new Secante();
+            txtResultado.setText(bi.metodoSecante(a, b, funcion, error, decimales));
         } else {
             JOptionPane.showMessageDialog(null, "La función no ha sido creada", "Casilla vacia ", JOptionPane.WARNING_MESSAGE);
         }
@@ -224,12 +248,12 @@ public class FormPuntoFijo extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FormPuntoFijo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormSecante.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
+            new FormSecante().setVisible(true);
         });
     }
 
@@ -243,11 +267,13 @@ public class FormPuntoFijo extends javax.swing.JFrame {
     private javax.swing.JLabel lbError;
     private javax.swing.JLabel lbResultado;
     private javax.swing.JLabel lbTitulo;
-    private javax.swing.JLabel lbX0;
+    private javax.swing.JLabel lbVa;
+    private javax.swing.JLabel lbVb;
     private javax.swing.JTextField txtDecimales;
     private javax.swing.JTextField txtEcuacion;
     private javax.swing.JTextField txtError;
     private javax.swing.JTextArea txtResultado;
-    private javax.swing.JTextField txtX0;
+    private javax.swing.JTextField txtVa;
+    private javax.swing.JTextField txtVb;
     // End of variables declaration//GEN-END:variables
 }
