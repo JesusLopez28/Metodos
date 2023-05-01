@@ -1,3 +1,7 @@
+/*
+ López Rosales Jesús Alejandro
+ 22110104       3°O       CETI
+ */
 package metodos;
 
 import javax.swing.JOptionPane;
